@@ -10,5 +10,6 @@ internal sealed class WpfContainerModule : IContainerModule
         containerBuilder.For<IWindowFinder>().Use<WindowFinder>().SingleInstance();
 
         containerBuilder.For<IWindowState>().Use<WindowState>().InstancePerDependency();
+        containerBuilder.For<IWindowStateFactory>().UseFactory();
     }
 }
